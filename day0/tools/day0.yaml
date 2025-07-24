@@ -1,0 +1,46 @@
+identity:
+  name: "day0"
+  author: "qin2dim"
+  label:
+    en_US: "day0"
+    zh_Hans: "day0"
+    pt_BR: "day0"
+description:
+  human:
+    en_US: "dify plugins day0"
+    zh_Hans: "dify plugins day0"
+    pt_BR: "dify plugins day0"
+  llm: "dify plugins day0"
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: "dify plugins day0"
+      zh_Hans: "dify plugins day0"
+      pt_BR: "dify plugins day0"
+    llm_description: "dify plugins day0"
+    form: llm
+  - name: sql_coder
+    type: model-selector
+    required: false
+    scope: tool-call&llm
+    label:
+      en_US: SQL Coder
+      zh_Hans: 查询语句生成器
+      pt_BR: SQL Coder
+      ja_JP: SQL Coder
+    human_description:
+      en_US: Model for generating SQL
+      zh_Hans: 用于生成数据库查询语句的模型
+      pt_BR: Model for generating SQL
+      ja_JP: Model for generating SQL
+    llm_description: Model for generating SQL
+    form: form
+extra:
+  python:
+    source: tools/day0.py
